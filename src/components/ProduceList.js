@@ -11,7 +11,7 @@ const ProducetList = () => {
     <div id='product-list'>
         {
         product_data.map((data)=> 
-            <Product data={data} />
+            <Product key={data.id} data={data} />
         )
  }
     </div>
