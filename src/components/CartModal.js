@@ -4,14 +4,14 @@ import { createPortal } from 'react-dom'
 
 const CartModal = ({onClose}) => {
     const handleClose=()=>{
-        console.log('closing the modal');
+       // console.log('closing the modal');
         onClose();
     }
   return createPortal (
     <>
-    <div id='modal-backdrop'></div>
+    <div onClick={handleClose} id='modal-backdrop'></div>
     <div  id='cart-modal'> 
-          <h2>title</h2>
+          <h2>Cart Items </h2>
           <Cart />
      <button  onClick={handleClose} >close</button>
     </div> 

@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import imgHeder from '../assets/download.jpeg';
 import CartModal from './CartModal';
+import { CartContext } from '../store/cart-context';
 const Header = () => {
     
+   const {items} = useContext(CartContext);
     const[isModalOpen,setIsModalOpen]=useState(false);
   
      const handleClickCart=()=>{
@@ -20,7 +22,7 @@ const Header = () => {
     <div id='main-header'>
         <img src={imgHeder} alt='header img' />
         <h1>Shopping List</h1>
-         <button id='cart-btn' onClick={handleClickCart}>cart (0)</button>
+         <button id='cart-btn' onClick={handleClickCart}>cart {items.length}</button>
       
     </div>
     </>

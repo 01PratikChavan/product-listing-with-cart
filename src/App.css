@@ -128,18 +128,38 @@ transition: 0.2s ease-in-out;
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 75%;
-  max-width: 25rem;
+  width:80%;
+  max-width: 35rem;
+  padding: 1rem;
   transform: translate(-50%,-50%) ;
-  background-color: white;
+  background: linear-gradient(to bottom, #2f38e3, #2831e6); /* Adjust colors as needed */
   z-index: 110 ;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px 5px rgba(0,0,0,0.25);
+
+}
+
+#cart-modal h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+#cart__empty{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* Add this to your styles */
 #cart {
-  background: linear-gradient(to bottom, #2980b9, #3498db); /* Adjust colors as needed */
+  border: 1px solid white;
   color: #fff;
-  padding: 20px;
+  overflow-y: scroll;
+  height:85%;
+  max-height: 20rem;
+  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -153,9 +173,14 @@ transition: 0.2s ease-in-out;
   margin-bottom: 10px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 7px rgba(0,0,0,0.35);
   display: flex;
   justify-content: space-between;
+}
+
+.cart_info{
+  font-size: 1.1rem;
 }
 
 #cart__product-info {
@@ -163,23 +188,29 @@ transition: 0.2s ease-in-out;
   flex-direction: column;
 }
 
+
 #cart-actions {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-#cart-actions button {
-  background-color: #fff;
-  color: #2980b9;
-  border: none;
-  padding: 5px 10px;
-  margin-left: 5px;
+#cart-actions button{
   cursor: pointer;
-  border-radius: 4px;
+}
+
+#cart-modal button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  text-align: right;
+  margin: 0.75rem;
 }
 
 #cart-totalPrice {
-  margin-top: 20px;
+  margin-top: 1.45rem;
+  font-size: 1.3rem;
   text-align: right;
 }
 
