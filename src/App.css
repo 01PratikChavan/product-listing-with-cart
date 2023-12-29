@@ -1,38 +1,113 @@
-.App {
+#main-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#main-header img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+#main-header h1 {
+  background-color: rgb(247, 98, 98);
+  border-radius: 6px;
+  border: none;
+  padding: 0.5rem;
+}
+#cart-btn {
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px rgba(0,0,0,0.25);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: rgb(39, 38, 38);
+  background-color: rgb(82, 115, 199);
+}
+
+#cart-btn:hover {
+  background-color: rgb(60, 105, 219);
+  color: rgb(20, 18, 18);
+}
+
+#shoppingList--heading {
+  font-size: 1.8rem;
+  width: 60%;
+  color: rgb(58, 188, 235);
+  margin: 3rem auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#product-list{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  width: 90%;
+  padding:0.25rem;
+  margin: 2rem auto;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+#product{
+display: flex;
+flex-direction: column;
+align-items: center;
+min-width: 20rem ;
+flex-wrap: wrap;
+width: 13rem;
+margin: 1rem ;
+border: 1px solid ;
+overflow: hidden;
+border-radius: 6px;
+box-shadow: 0px 0px 6px rgba(0,0,0,0.52);
+}
+#product img{
+  width:100% ;
+  height: 15rem;
+  object-fit:cover; 
+
+}
+#product img:hover{
+   transform: scale(1.1);
+   object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+#product__info{
+ margin-left: 1rem;  
+}
+
+#product__info--title{
+  font-size: 1.85rem;
+  color: rgb(216, 95, 9);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#product__info--description{
+  font-size: 1rem;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#product__info--price{
+  font-style:italic ;
+  font-weight: bold; 
+  font-size: 1.24rem;
+}
+
+#add-to-cart-btn{
+margin-bottom: 0.25rem;
+padding: 0.5rem 1rem;
+border-radius: 6px;
+font-size: 1rem;
+background-color: rgb(87, 92, 247);
+border: none;
+cursor: pointer;
+font-weight: bold;
+color: rgb(35, 34, 34);
+transition: 0.2s ease-in-out;
+}
+#add-to-cart-btn:hover{
+  background-color: rgb(47, 53, 245);
+ color: rgb(0, 0, 0);
 }
